@@ -1,3 +1,4 @@
+require 'pry'
 def reformat_languages(languages)
  result = {}
   languages.each do |style, lang_hash|
@@ -7,6 +8,7 @@ def reformat_languages(languages)
         result[lang][:style] = [style]
       else
         result[lang][:style] << style
+      binding.pry
       end
     end
   end
